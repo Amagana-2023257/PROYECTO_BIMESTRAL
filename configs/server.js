@@ -5,10 +5,12 @@ import cors from "cors"
 import helmet from "helmet"
 import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
+import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 import authRoutes from "../src/auth/auth.routes.js"
 import userRoutes from "../src/user/user.routes.js"
 import categoryRoutes from "../src/category/category.routers.js"
-import apiLimiter from "../src/middlewares/rate-limit-validator.js"
+import productRoutes from "../src/product/product.routers.js"
+import cartRoutes from "../src/cart/cart.routers.js"
 import { swaggerDocs, swaggerUi } from "./swagger.js"
 
 const middlewares = (app) => {
@@ -21,6 +23,8 @@ const middlewares = (app) => {
 }
 
 const routes = (app) =>{
+    app.use("/ventas/v1/cart", cartRoutes)
+    app.use("/ventas/v1/product", productRoutes)
     app.use("/ventas/v1/user", userRoutes)
     app.use("/ventas/v1/auth", authRoutes)
     app.use("/ventas/v1/category", categoryRoutes)

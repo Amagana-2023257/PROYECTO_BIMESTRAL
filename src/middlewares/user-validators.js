@@ -1,14 +1,7 @@
 import { body, param, validationResult } from "express-validator"; 
 import { validarCampos } from "./validate-fields.js";
 import { handleErrors } from "./handle-errors.js";
-import { emailExists, blockRole, userExists, usernameExists, userExistsToken, blockToken, pictureExist } from "../helpers/db-validators.js"
-
-
-
-
-import { isValidObjectId } from "mongoose";
-import User from "../user/user.model.js";
-
+import { emailExists, blockRole, userExists, userExistsToken, blockToken, pictureExist } from "../helpers/db-validators.js"
 
 export const registerValidator = [
   body("name")
@@ -19,6 +12,7 @@ export const registerValidator = [
     .isEmail().withMessage("El correo electrónico no es válido")
     .normalizeEmail() 
     .custom(emailExists), 
+
   body("password")
     .notEmpty().withMessage("La contraseña es requerida")
     .isLength({ min: 6 }).withMessage("La contraseña debe tener al menos 6 caracteres"),

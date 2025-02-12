@@ -58,3 +58,11 @@ export const pictureExist = (value, { req }) => {
     }
     return true;
 }
+
+export const searchProduct = async (productId) => {
+    const product = await Product.findById(productId);
+    if (!product) {
+      throw new Error("El producto no existe.");
+    }
+    return true;
+  }
