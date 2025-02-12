@@ -6,6 +6,7 @@ import helmet from "helmet"
 import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
 import authRoutes from "../src/auth/auth.routes.js"
+import userRoutes from "../src/user/user.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
 import { swaggerDocs, swaggerUi } from "./swagger.js"
 
@@ -19,6 +20,7 @@ const middlewares = (app) => {
 }
 
 const routes = (app) =>{
+    app.use("/ventas/v1/user", userRoutes)
     app.use("/ventas/v1/auth", authRoutes)
     app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
