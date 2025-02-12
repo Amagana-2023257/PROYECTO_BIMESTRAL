@@ -19,13 +19,13 @@ Sigue los siguientes pasos para configurar y ejecutar el proyecto localmente:
 
 ```bash
 git clone https://github.com/Amagana-2023257/PROYECTO_BIMESTRAL.git
-
+```
 
 ### 3. Instalar dependencias
 
 ```bash
 npm install
-
+```
 
 ### 4.  Configuración de variables de entorno
 
@@ -33,13 +33,13 @@ npm install
 PORT=3000
 MONGO_URI=mongodb://localhost:27017/ventas-2023257
 JWT_SECRET=test
-
+```
 
 ### 5. Ejecutar el proyecto
 
 ```bash
 npm run dev
-
+```
 
 ### 6. Estructura del Proyecto
 
@@ -53,7 +53,7 @@ npm run dev
 │   └── middlewares/
 │       └── rate-limit-validator.js # Middleware de validación de límites de solicitudes
 └── .env                 # Variables de entorno
-
+```
 
 ### Descripción del Código
 1. Express Setup (index.js)
