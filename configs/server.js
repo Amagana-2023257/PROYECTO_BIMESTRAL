@@ -12,6 +12,7 @@ import categoryRoutes from "../src/category/category.routers.js"
 import productRoutes from "../src/product/product.routers.js"
 import cartRoutes from "../src/cart/cart.routers.js"
 import invoiceRoutes from "../src/invoice/unvoice.routes.js"
+import paymentRoytes from "../src/payment/payment.routes.js"
 import { swaggerDocs, swaggerUi } from "./swagger.js"
 
 const middlewares = (app) => {
@@ -30,6 +31,7 @@ const routes = (app) =>{
     app.use("/ventas/v1/user", userRoutes)
     app.use("/ventas/v1/auth", authRoutes)
     app.use("/ventas/v1/category", categoryRoutes)
+    app.use("/ventas/v1/payment", paymentRoytes)
     app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 
