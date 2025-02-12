@@ -1,0 +1,868 @@
+{
+	"info": {
+		"_postman_id": "26744955-bdf7-46b4-a9f0-0e335310e992",
+		"name": "bimestral",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31878676"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Donis",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "edonis@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Chinit2,000",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "edonis",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/User/Downloads/calzone-7.jpg"
+								}
+							]
+						},
+						"url": "http://localhost:3000/ventas/v1/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"amagana2@gmail.com\",\r\n    \"password\" : \"Chinit2,000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/ventas/v1/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "CLIENT",
+					"item": [
+						{
+							"name": "user",
+							"item": [
+								{
+									"name": "updateuser",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYzUxYmU0ZjQ0NDhkZjRmODk5ODAiLCJpYXQiOjE3MzkzNzU5MzQsImV4cCI6MTczOTM3OTUzNH0.VDhj3hXjutESHKs6xbDmUGhGaD2oo-QN2tzfqM5nRv0"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\" : \"edonisUpdated\",\r\n    \"email\" : \"edonisupdated@gmail.com\",\r\n    \"password\" : \"Chinito2,000\",\r\n    \"username\" : \"edonisupdated\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/ventas/v1/user/update"
+									},
+									"response": []
+								},
+								{
+									"name": "deleteUserByToken",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYzUxYmU0ZjQ0NDhkZjRmODk5ODAiLCJpYXQiOjE3MzkzNzU5MzQsImV4cCI6MTczOTM3OTUzNH0.VDhj3hXjutESHKs6xbDmUGhGaD2oo-QN2tzfqM5nRv0"
+											}
+										},
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/ventas/v1/user/delete"
+									},
+									"response": []
+								},
+								{
+									"name": "updatePhoto",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYzUxYmU0ZjQ0NDhkZjRmODk5ODAiLCJpYXQiOjE3MzkzNzU5MzQsImV4cCI6MTczOTM3OTUzNH0.VDhj3hXjutESHKs6xbDmUGhGaD2oo-QN2tzfqM5nRv0"
+											}
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "profilePicture",
+													"type": "file",
+													"src": "/C:/Users/User/Downloads/Copia de Copia de Copia de Copia de Copia de Copia de Copia de Copia de Copia de Copia de Copia de Copia de Copia de Q.135.00.png"
+												}
+											]
+										},
+										"url": "http://localhost:3000/ventas/v1/user/updatePhoto"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Category",
+							"item": [
+								{
+									"name": "getAllCategory",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNDQ4MDcsImV4cCI6MTczOTM0ODQwN30.8WMDm0-p8pGTHvCrfucz1kElqz63A9hGsuVJmK9csa0"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/category/"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Product",
+							"item": [
+								{
+									"name": "getAllProducts",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNzYxMjIsImV4cCI6MTczOTM3OTcyMn0.L2AqVjUrsUd_GUqpE1iiiQvtOhfOM8JDH-XMeCU8DtU"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/product/"
+									},
+									"response": []
+								},
+								{
+									"name": "searchProduct",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNDg0NTgsImV4cCI6MTczOTM1MjA1OH0.miJNK7nvCnSA7Q16KG1jGivgDjtauKjQBR4KlLOmFf4"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/ventas/v1/product/search?query=TEST",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"ventas",
+												"v1",
+												"product",
+												"search"
+											],
+											"query": [
+												{
+													"key": "query",
+													"value": "TEST"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "searchProductById",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNDg0NTgsImV4cCI6MTczOTM1MjA1OH0.miJNK7nvCnSA7Q16KG1jGivgDjtauKjQBR4KlLOmFf4"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/product/search/67ac5ad6e7af07cdc64fbcd6"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "cart",
+							"item": [
+								{
+									"name": "createCart",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNzYxMjIsImV4cCI6MTczOTM3OTcyMn0.L2AqVjUrsUd_GUqpE1iiiQvtOhfOM8JDH-XMeCU8DtU"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/cart/createCart"
+									},
+									"response": []
+								},
+								{
+									"name": "getAllCart",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNTI2OTUsImV4cCI6MTczOTM1NjI5NX0.USYQNkX4EOcNMExIDXQYhkYO2KH3kz7ej17ggOQlpp4"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/cart/"
+									},
+									"response": []
+								},
+								{
+									"name": "addProduct",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNzYxMjIsImV4cCI6MTczOTM3OTcyMn0.L2AqVjUrsUd_GUqpE1iiiQvtOhfOM8JDH-XMeCU8DtU"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"productId\" : \"67ac5ad6e7af07cdc64fbcd6\",\r\n    \"quantity\" : \"10\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/ventas/v1/cart/add"
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNTI2OTUsImV4cCI6MTczOTM1NjI5NX0.USYQNkX4EOcNMExIDXQYhkYO2KH3kz7ej17ggOQlpp4"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"productId\" : \"67ac5ad6e7af07cdc64fbcd6\",\r\n    \"quantity\" : \"2\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/ventas/v1/cart/update"
+									},
+									"response": []
+								},
+								{
+									"name": "removeProduct",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNTI2OTUsImV4cCI6MTczOTM1NjI5NX0.USYQNkX4EOcNMExIDXQYhkYO2KH3kz7ej17ggOQlpp4"
+											}
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/cart/remove/67ac5ad6e7af07cdc64fbcd6"
+									},
+									"response": []
+								},
+								{
+									"name": "deleteAll",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNTI2OTUsImV4cCI6MTczOTM1NjI5NX0.USYQNkX4EOcNMExIDXQYhkYO2KH3kz7ej17ggOQlpp4"
+											}
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/cart/clear"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "invoice",
+							"item": [
+								{
+									"name": "add",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNTI2OTUsImV4cCI6MTczOTM1NjI5NX0.USYQNkX4EOcNMExIDXQYhkYO2KH3kz7ej17ggOQlpp4"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/invoice/create"
+									},
+									"response": []
+								},
+								{
+									"name": "getByUser",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNzYxMjIsImV4cCI6MTczOTM3OTcyMn0.L2AqVjUrsUd_GUqpE1iiiQvtOhfOM8JDH-XMeCU8DtU"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/Invoice/user"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "payment",
+							"item": [
+								{
+									"name": "add",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNzYxMjIsImV4cCI6MTczOTM3OTcyMn0.L2AqVjUrsUd_GUqpE1iiiQvtOhfOM8JDH-XMeCU8DtU"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/payment/create"
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "ADMIN",
+					"item": [
+						{
+							"name": "product",
+							"item": [
+								{
+									"name": "addProduct",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNDg0NTgsImV4cCI6MTczOTM1MjA1OH0.miJNK7nvCnSA7Q16KG1jGivgDjtauKjQBR4KlLOmFf4"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "testdescription",
+													"type": "text"
+												},
+												{
+													"key": "price",
+													"value": "99",
+													"type": "text"
+												},
+												{
+													"key": "stock",
+													"value": "99",
+													"type": "text"
+												},
+												{
+													"key": "category",
+													"value": "67ac51471c690c52e3f4c8fb",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"type": "file",
+													"src": "/C:/Users/User/Downloads/Copia de Copia de Copia de Copia de Copia de Copia de Copia de Copia de Copia de Copia de Copia de Copia de Q.135.00 (785 x 938 px) (4).png"
+												}
+											]
+										},
+										"url": "http://localhost:3000/ventas/v1/product/addProduct"
+									},
+									"response": []
+								},
+								{
+									"name": "updateProduct",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNDg0NTgsImV4cCI6MTczOTM1MjA1OH0.miJNK7nvCnSA7Q16KG1jGivgDjtauKjQBR4KlLOmFf4"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"testUpdated\",\r\n    \"description\": \"descriptiontestUpdated\",\r\n    \"price\": \"99.99\",\r\n    \"stock\": \"99.99\",\r\n    \"category\": \"67ac51471c690c52e3f4c8fb\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/ventas/v1/product/updateProduct/67ac5ad6e7af07cdc64fbcd6"
+									},
+									"response": []
+								},
+								{
+									"name": "deletedProduct",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNDg0NTgsImV4cCI6MTczOTM1MjA1OH0.miJNK7nvCnSA7Q16KG1jGivgDjtauKjQBR4KlLOmFf4"
+											}
+										},
+										"method": "PATCH",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/product/deleteProduct/67ac5ad6e7af07cdc64fbcd6"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "User",
+							"item": [
+								{
+									"name": "updateRole",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNzYxMjIsImV4cCI6MTczOTM3OTcyMn0.L2AqVjUrsUd_GUqpE1iiiQvtOhfOM8JDH-XMeCU8DtU"
+											}
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"role\" : \"CLIENT\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/ventas/v1/user/updateRole/67acc51be4f4448df4f89980"
+									},
+									"response": []
+								},
+								{
+									"name": "getById",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNzYxMjIsImV4cCI6MTczOTM3OTcyMn0.L2AqVjUrsUd_GUqpE1iiiQvtOhfOM8JDH-XMeCU8DtU"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/user/67ac204d78bdb50ecd67287b"
+									},
+									"response": []
+								},
+								{
+									"name": "getAllUsers",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNzYxMjIsImV4cCI6MTczOTM3OTcyMn0.L2AqVjUrsUd_GUqpE1iiiQvtOhfOM8JDH-XMeCU8DtU"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/user/"
+									},
+									"response": []
+								},
+								{
+									"name": "deleteUser",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMjA0ZDc4YmRiNTBlY2Q2NzI4N2IiLCJpYXQiOjE3MzkzMzYwMzksImV4cCI6MTczOTMzOTYzOX0.hrY5w8R6U-0q0g1z0bK7KPo9hUWRHm71dueaqFiTTSw"
+											}
+										},
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/ventas/v1/user/deleteUser/67ac204d78bdb50ecd67287b"
+									},
+									"response": []
+								},
+								{
+									"name": "updateuserById",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMjA0ZDc4YmRiNTBlY2Q2NzI4N2IiLCJpYXQiOjE3MzkzNDA1MDEsImV4cCI6MTczOTM0NDEwMX0.CHN8cq9uVjxm2VO34IKUV3MpRu9K2hCOFzNydD0wskQ"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\" : \"Angel4Update\",\r\n    \"email\" : \"amaganaUpdate4@gmail.com\",\r\n    \"password\" : \"Chinito2,000\",\r\n    \"username\" : \"AmaganaUpdate4\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/ventas/v1/user/updateUser/67ac370ece83c7eb6a3618d4"
+									},
+									"response": []
+								},
+								{
+									"name": "updatePhotobyId",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMjA0ZDc4YmRiNTBlY2Q2NzI4N2IiLCJpYXQiOjE3MzkzNDA1MDEsImV4cCI6MTczOTM0NDEwMX0.CHN8cq9uVjxm2VO34IKUV3MpRu9K2hCOFzNydD0wskQ"
+											}
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "profilePicture",
+													"type": "file",
+													"src": "/C:/Users/User/Downloads/coca-cola-2-litros.jpg"
+												}
+											]
+										},
+										"url": "http://localhost:3000/ventas/v1/user/updatePhoto/67ac370ece83c7eb6a3618d4"
+									},
+									"response": []
+								},
+								{
+									"name": "addUser",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNzYxMjIsImV4cCI6MTczOTM3OTcyMn0.L2AqVjUrsUd_GUqpE1iiiQvtOhfOM8JDH-XMeCU8DtU"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "Donis",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "Edonis@kinal.edu.gt",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "Donis12345678",
+													"type": "text"
+												},
+												{
+													"key": "username",
+													"value": "Edonis",
+													"type": "text"
+												},
+												{
+													"key": "profilePicture",
+													"type": "file",
+													"src": "/C:/Users/User/Downloads/OIP (2).jpg"
+												}
+											]
+										},
+										"url": "http://localhost:3000/ventas/v1/user/addUser"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Category",
+							"item": [
+								{
+									"name": "addCategory",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNDQ4MDcsImV4cCI6MTczOTM0ODQwN30.8WMDm0-p8pGTHvCrfucz1kElqz63A9hGsuVJmK9csa0"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\" : \"test\",\r\n    \"description\" : \"descriptionTest\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/ventas/v1/category/addCategory"
+									},
+									"response": []
+								},
+								{
+									"name": "updateCategory",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNDQ4MDcsImV4cCI6MTczOTM0ODQwN30.8WMDm0-p8pGTHvCrfucz1kElqz63A9hGsuVJmK9csa0"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\" : \"testUpdated\",\r\n    \"description\" : \"descriptionTestUpdated\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/ventas/v1/category/updateCategory/67ac51471c690c52e3f4c8fb"
+									},
+									"response": []
+								},
+								{
+									"name": "getCategoryById",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNDQ4MDcsImV4cCI6MTczOTM0ODQwN30.8WMDm0-p8pGTHvCrfucz1kElqz63A9hGsuVJmK9csa0"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/category/getCategoryById/67ac51471c690c52e3f4c8fb"
+									},
+									"response": []
+								},
+								{
+									"name": "deleteCategory",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNDQ4MDcsImV4cCI6MTczOTM0ODQwN30.8WMDm0-p8pGTHvCrfucz1kElqz63A9hGsuVJmK9csa0"
+											}
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/category/deleteCategory/67ac51471c690c52e3f4c8fb"
+									},
+									"response": []
+								},
+								{
+									"name": "activateCategory",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNDQ4MDcsImV4cCI6MTczOTM0ODQwN30.8WMDm0-p8pGTHvCrfucz1kElqz63A9hGsuVJmK9csa0"
+											}
+										},
+										"method": "PATCH",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/category/activateCategory/67ac51471c690c52e3f4c8fb"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "invoice",
+							"item": [
+								{
+									"name": "getAll",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNTI2OTUsImV4cCI6MTczOTM1NjI5NX0.USYQNkX4EOcNMExIDXQYhkYO2KH3kz7ej17ggOQlpp4"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/Invoice/"
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNTI2OTUsImV4cCI6MTczOTM1NjI5NX0.USYQNkX4EOcNMExIDXQYhkYO2KH3kz7ej17ggOQlpp4"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"invoiceId\" : \"67ac7256a98a5b56f5feef47\", \r\n    \"status\" : \"PENDING\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:3000/ventas/v1/Invoice/update"
+									},
+									"response": []
+								},
+								{
+									"name": "deleted",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjMzFjN2ZiMDRlNjNlZjFhZmU2OGIiLCJpYXQiOjE3MzkzNTI2OTUsImV4cCI6MTczOTM1NjI5NX0.USYQNkX4EOcNMExIDXQYhkYO2KH3kz7ej17ggOQlpp4"
+											}
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": "http://localhost:3000/ventas/v1/Invoice/delete/67ac7256a98a5b56f5feef47"
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
