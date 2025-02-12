@@ -21,13 +21,10 @@ const swaggerOptions = {
     },
     apis:[
         "./src/auth/*.js",
-        "./src/cart/*.js",
-        "./src/category/*.js",
-        "./src/invoice/*.js",
-        "./src/payment/*.js",
-        "./src/product/*.js",
         "./src/user/*.js",
-
+        "./src/category/*.js",
+        "./src/product/*.js",
+        "./src/cart/*.js"
     ]
 }
 
