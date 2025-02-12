@@ -61,3 +61,6 @@ export const searchProductsValidator = [
         .isString().withMessage("El término de búsqueda debe ser una cadena de texto.")
         .notEmpty().withMessage("El término de búsqueda es obligatorio."),
 ];
+
+
+

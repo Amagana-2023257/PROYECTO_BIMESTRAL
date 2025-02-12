@@ -289,3 +289,5 @@ export default Product;
  *       500:
  *         description: Error al cambiar el estado del producto.
  */
+
+

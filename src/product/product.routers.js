@@ -19,3 +19,5 @@ router.put("/updateProduct/:id", validateJWT, hasRoles("ADMIN"), updateProductVa
 router.patch("/deleteProduct/:id", validateJWT, hasRoles("ADMIN"), updateProductStatus);
 
 export default router;
+
+

@@ -476,3 +476,7 @@ export const updateProductStatus = async (req, res) => {
  *       500:
  *         description: Error al actualizar el estado del producto.
  */
+
+
+
+
