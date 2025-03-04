@@ -1,0 +1,126 @@
+[{
+  "_id": {
+    "$oid": "67c69b60e53630b2c6004b80"
+  },
+  "name": "testProduct01",
+  "description": "testdescription",
+  "price": 32,
+  "stock": 99,
+  "category": {
+    "$oid": "67c69b1de53630b2c6004b71"
+  },
+  "image": "OIP-1741069152040.jpg",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-04T06:19:12.080Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T06:19:12.080Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c69b6be53630b2c6004b83"
+  },
+  "name": "testProduct02",
+  "description": "testdescription",
+  "price": 32,
+  "stock": 999,
+  "category": {
+    "$oid": "67c69b1de53630b2c6004b71"
+  },
+  "image": "OIP-1741069163554.jpg",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-04T06:19:23.585Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T06:19:23.585Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c69b70e53630b2c6004b86"
+  },
+  "name": "testProduct03",
+  "description": "testdescription",
+  "price": 32,
+  "stock": 99,
+  "category": {
+    "$oid": "67c69b1de53630b2c6004b71"
+  },
+  "image": "OIP-1741069168078.jpg",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-04T06:19:28.101Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T06:19:28.101Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c69b73e53630b2c6004b89"
+  },
+  "name": "testProduct04",
+  "description": "testdescription",
+  "price": 32,
+  "stock": 99,
+  "category": {
+    "$oid": "67c69b1de53630b2c6004b71"
+  },
+  "image": "OIP-1741069171422.jpg",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-04T06:19:31.436Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T06:24:03.413Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c69b7ee53630b2c6004b8c"
+  },
+  "name": "testProduct04",
+  "description": "testdescription",
+  "price": 32,
+  "stock": 99,
+  "category": {
+    "$oid": "67c69b28e53630b2c6004b79"
+  },
+  "image": "OIP-1741069181985.jpg",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-04T06:19:42.009Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T06:19:42.009Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c69b83e53630b2c6004b8f"
+  },
+  "name": "testProduct06",
+  "description": "testdescription",
+  "price": 32,
+  "stock": 99,
+  "category": {
+    "$oid": "67c69b28e53630b2c6004b79"
+  },
+  "image": "OIP-1741069187984.jpg",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-04T06:19:47.998Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T06:24:03.429Z"
+  },
+  "__v": 0
+}]

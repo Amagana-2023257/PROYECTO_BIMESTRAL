@@ -19,8 +19,7 @@ export const addProductToCartValidator = [
     .notEmpty()
     .withMessage("El ID del producto es obligatorio.")
     .isMongoId()
-    .withMessage("El ID del producto debe ser un ID válido de MongoDB.")
-    .custom(searchProduct),
+    .withMessage("El ID del producto debe ser un ID válido de MongoDB."),
   body("quantity")
     .notEmpty()
     .withMessage("La cantidad es obligatoria.")
@@ -30,14 +29,12 @@ export const addProductToCartValidator = [
   validarCampos,
   handleErrors
 ];
-
 export const updateProductQuantityValidator = [
   body("productId")
     .notEmpty()
     .withMessage("El ID del producto es obligatorio.")
     .isMongoId()
-    .withMessage("El ID del producto debe ser un ID válido de MongoDB.")
-    .custom(searchProduct),
+    .withMessage("El ID del producto debe ser un ID válido de MongoDB."),
   body("quantity")
     .notEmpty()
     .withMessage("La cantidad es obligatoria.")
@@ -53,8 +50,7 @@ export const removeProductFromCartValidator = [
     .notEmpty()
     .withMessage("El ID del producto es obligatorio.")
     .isMongoId()
-    .withMessage("El ID del producto debe ser un ID válido de MongoDB.")
-    .custom(searchProduct),
+    .withMessage("El ID del producto debe ser un ID válido de MongoDB."),
   validarCampos,
   handleErrors
 ];

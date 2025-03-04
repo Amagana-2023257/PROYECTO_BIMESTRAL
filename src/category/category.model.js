@@ -67,37 +67,3 @@ export default Category;
  *         - createdAt
  *         - updatedAt
  */
-
-/**
- * @swagger
- * tags:
- *   name: Category
- *   description: Esquema y estructura de la categoría.
- */
-
-/**
- * @swagger
- * components:
- *   responses:
- *     CategoryResponse:
- *       description: Respuesta que incluye los detalles de una categoría.
- *       content:
- *         application/json:
- *           schema:
- *             $ref: '#/components/schemas/Category'
- */
-
-/**
- * @swagger
- * components:
- *   responses:
- *     CategoryListResponse:
- *       description: Respuesta que incluye una lista de categorías.
- *       content:
- *         application/json:
- *           schema:
- *             type: array
- *             items:
- *               $ref: '#/components/schemas/Category'
- */
-

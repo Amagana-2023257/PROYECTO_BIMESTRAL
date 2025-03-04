@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "67c69aa0e53630b2c6004b6c"
+  },
+  "name": "Angel",
+  "username": "amagana",
+  "email": "amagana-2023257@kinal.edu.gt",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$HeL5hi/024lkEKhPPW5EDQ$VMxjFqjFJZgoOa2MIMe/Q6HhTlHmp5IHyVYtlvFEifw",
+  "profilePicture": null,
+  "role": "ADMIN",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-04T06:16:00.512Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-04T06:16:00.512Z"
+  },
+  "__v": 0
+}]
